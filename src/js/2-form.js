@@ -15,8 +15,8 @@ if (localStorage.getItem(localStorageKey)) {
 
 form.addEventListener('input', (event) => {
   // Отримуємо значення поля вводу та текстової області
-  const mail = input.value;
-  const massage = textarea.value;
+  const mail = input.value.trim();
+  const massage = textarea.value.trim();
   
   // Створюємо об'єкт feedback
   const feedback = {
