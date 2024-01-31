@@ -1,9 +1,9 @@
 const form = document.querySelector('.feedback-form');
-const input = document.querySelector('input');
-const textarea = document.querySelector('textarea');
-const button = document.querySelector('button');
+const input = document.querySelector('input[name="email"]');
+const textarea = document.querySelector('textarea[name="message"]');
 
-const localStorageKey = "feedback-form-state";
+
+const localStorageKey = 'feedback-form-state';
 if (localStorage.getItem(localStorageKey)) {
   // Отримуємо об'єкт зі збереженими даними
   const savedData = JSON.parse(localStorage.getItem(localStorageKey));
@@ -28,7 +28,7 @@ form.addEventListener('input', (event) => {
   
 });
 
-form.addEventListener("submit", event => {
+form.addEventListener('submit', event => {
     event.preventDefault();
     const email = input.value;
     const message = textarea.value;
