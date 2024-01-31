@@ -68,10 +68,10 @@ const images = [
 const galleryList = document.querySelector('.gallery');
 const markup = images
   .map((image) => {
-    return `<li class="gallery-item"><a class="gallery-link" href=${image.original}><img class="gallery-image" src=${image.preview}  alt=${image.description} title=${image.description}></a></li>`
+    return `<li class="gallery-item"><a class="gallery-link" href=${image.original}><img class="gallery-image" src=${image.preview}  alt=${image.description} alt=${image.description}></a></li>`
   })
   .join(''); 
 
 galleryList.insertAdjacentHTML("afterbegin", markup);
 
-var lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, captionPosition: 'bottom' });
+var lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, captionPosition: 'bottom',captionsData: 'alt' });
