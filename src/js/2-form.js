@@ -36,7 +36,7 @@ form.addEventListener('input', (event) => {
 form.addEventListener('submit', event => {
     event.preventDefault();
     const email = input.value.trim();
-    const message = textarea.value.trim();
+    const message = textarea.value.trim()  ;
   
   if (email && message) {
     console.log({email, message});
